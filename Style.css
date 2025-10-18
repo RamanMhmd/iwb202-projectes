@@ -1,0 +1,170 @@
+:root {
+  --bg: #e2e4eb;
+  --card: #ffffff;
+  --accent: #0f04a0;
+  --muted: #6b7280;
+  --danger: #dc2626;
+  --pad: 14px;
+  --radius: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background: var(--bg);
+  color: #111;
+}
+.nav {
+  background: #fff;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+.nav nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 16px;
+  align-items: center;
+}
+.nav a {
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #111;
+}
+.nav a.active {
+  background: var(--accent);
+  color: #fff;
+}
+.container {
+  max-width: 980px;
+  margin: 22px auto;
+  padding: 0 16px;
+}
+.card {
+  background: var(--card);
+  padding: var(--pad);
+  border: 2px solid var(--accent);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 18px rgba(12, 12, 20, 0.04);
+  margin-bottom: 18px;
+}
+h1 {
+  margin: 0 0 12px 0;
+  font-size: 22px;
+}
+h2 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  color: var(--accent);
+}
+.striped {
+  width: 100%;
+  border-collapse: collapse;
+}
+.striped th,
+.striped td {
+  padding: 10px;
+  border-bottom: 1px solid #eef0f4;
+  text-align: left;
+}
+.fullwidth {
+  width: 100%;
+}
+.row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.row.space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn {
+  background: var(--accent);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+.btn.ghost {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+.form {
+  max-width: 760px;
+  margin: 0 auto;
+}
+.form-row {
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+}
+.form-row label {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.form-row input,
+.form-row select,
+.form-row textarea {
+  padding: 10px;
+  border: 1px solid #e6e9ef;
+  border-radius: 8px;
+}
+.inline {
+  margin-right: 10px;
+}
+.logo {
+  width: 120px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 6px;
+  background: #fff;
+  border: 1px solid #eef0f4;
+}
+.details {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.details-left {
+  min-width: 140px;
+}
+.details-right {
+  flex: 1;
+}
+.mediaContainer video,
+.mediaContainer audio {
+  max-width: 320px;
+  display: block;
+  margin-top: 10px;
+}
+.footer {
+  text-align: center;
+  padding: 18px;
+  color: var(--muted);
+}
+.form-msg {
+  color: var(--danger);
+  margin-top: 8px;
+}
+textarea {
+  resize: vertical;
+}
+@media (max-width: 640px) {
+  .details {
+    flex-direction: column;
+  }
+  .nav nav {
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Apps</title>
+  <link rel="stylesheet" href="Style.css" />
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="nav">
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="AboutUs.html">About Us</a>
+      <a href="apps.html" class="active">Apps</a>
+      <a href="add_app.html">Add App</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Applications</h1>
+
+    <section class="card">
+      <div class="row space-between">
+        <h2>List of Applications</h2>
+        <button id="clearAll" class="btn ghost">Clear All</button>
+      </div>
+
+      <table id="appsTable" class="striped fullwidth">
+        <thead>
+          <tr>
+            <th>Application</th>
+            <th>Developer</th>
+            <th>Domain</th>
+            <th>Free</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <template id="rowTemplate">
+    <tr class="appRow">
+      <td class="appName"></td>
+      <td class="appDev"></td>
+      <td class="appDomain"></td>
+      <td class="appFree"></td>
+      <td><button class="btn detailsBtn">Show details</button></td>
+    </tr>
+    <tr class="detailsRow" style="display:none">
+      <td colspan="5">
+        <div class="details">
+          <div class="details-left">
+            <img class="logo" alt="logo" />
+            <div class="mediaContainer"></div>
+          </div>
+          <div class="details-right">
+            <p class="desc"></p>
+            <p><a class="website" target="_blank" rel="noopener"></a></p>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </template>
+
+  <footer class="footer">End of apps list</footer>
+</body>
+
+</html>

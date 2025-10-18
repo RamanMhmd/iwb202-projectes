@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Add App</title>
+    <link rel="stylesheet" href="Style.css" />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header class="nav">
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="AboutUs.html">About Us</a>
+            <a href="apps.html">Apps</a>
+            <a href="add_app.html" class="active">Add App</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Add New Application</h1>
+
+        <form id="appForm" class="card form">
+            <div class="form-row">
+                <label>Application name</label>
+                <input id="appName" name="appName" required placeholder="Only English letters, no spaces" />
+            </div>
+
+            <div class="form-row">
+                <label>Developer company</label>
+                <input id="developer" name="developer" required placeholder="Only English letters" />
+            </div>
+
+            <div class="form-row">
+                <label>Website</label>
+                <input id="website" name="website" type="url" required placeholder="https://example.com" />
+            </div>
+
+            <div class="form-row">
+                <label>Free?</label>
+                <label class="inline"><input type="radio" name="isFree" value="Yes" checked /> Yes</label>
+                <label class="inline"><input type="radio" name="isFree" value="No" /> No</label>
+            </div>
+
+            <div class="form-row">
+                <label>Usage domain</label>
+                <select id="domain" required>
+                    <option value="">Choose domain</option>
+                    <option>E-Commerce</option>
+                    <option>Education</option>
+                    <option>Robotics</option>
+                    <option>Productivity</option>
+                    <option>Entertainment</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <label>Short description</label>
+                <textarea id="description" required rows="4" placeholder="Short description"></textarea>
+            </div>
+
+            <div class="form-row">
+                <label>Logo image URL (optional)</label>
+                <input id="logoUrl" placeholder="https://example.com/logo.png" />
+            </div>
+
+            <div class="form-row">
+                <label>Audio/Video URL (optional)</label>
+                <input id="mediaUrl" placeholder="https://example.com/media.mp4 or .mp3" />
+            </div>
+
+            <div class="row">
+                <button type="submit" class="btn">Submit</button>
+                <button type="reset" class="btn ghost">Reset</button>
+            </div>
+
+            <div id="formMsg" class="form-msg"></div>
+        </form>
+    </main>
+
+    <footer class="footer">Add apps and they will appear in apps.html</footer>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Home</title>
+    <link rel="stylesheet" href="Style.css" />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header class="nav">
+        <nav>
+            <a href="home.html" class="active">Home</a>
+            <a href="AboutUs.html">About Us</a>
+            <a href="apps.html">Apps</a>
+            <a href="add_app.html">Add App</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>مشروع التطبيقات — Home</h1>
+
+        <section class="card">
+            <h2>أسماء أعضاء الفريق</h2>
+            <table class="striped">
+                <thead>
+                    <tr>
+                        <th>الاسم (عربي)</th>
+                        <th>Name (English)</th>
+                        <th>Student Number</th>
+                    </tr>
+                </thead>
+                <tbody id="membersList">
+                    <tr>
+                        <td>تيست</td>
+                        <td>Student One</td>
+                        <td>123456</td>
+                    </tr>
+                    <tr>
+                        <td>تيست</td>
+                        <td>Student Two</td>
+                        <td>234567</td>
+                    </tr>
+                    <tr>
+                        <td>تيست</td>
+                        <td>Student Three</td>
+                        <td>345678</td>
+                    </tr>
+                    <tr>
+                        <td>تيست</td>
+                        <td>Student Four</td>
+                        <td>456789</td>
+                    </tr>
+                    <tr>
+                        <td>تيست</td>
+                        <td>Student Five</td>
+                        <td>567890</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="card">
+            <h2>لينك النشر</h2>
+            <p id="publishLink"><a href="https://your-free-hosting.example" target="_blank"
+                    rel="noopener">https://your-free-hosting.example</a></p>
+        </section>
+
+        <section class="card">
+            <h2>ملاحظات الفريق</h2>
+            <textarea id="teamNotes" rows="6" placeholder="أضف ملاحظاتكم هنا"></textarea>
+            <div class="row">
+                <button id="saveNotes" class="btn">حفظ الملاحظات</button>
+                <button id="clearNotes" class="btn ghost">مسح</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">SVU 🔥</footer>
+</body>
+
+</html>
